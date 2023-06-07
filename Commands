@@ -83,7 +83,11 @@ Miscellaneous::
           yum install <package> -y
         
         
-        
+  Exit status is very crucial in linux as it shows whether the result is success or failure. Linux stores it in a special variable.
+    $?
+       echo $?  
+         0 - Success
+         any number other than zero - Failure.
         
         
         

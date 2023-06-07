@@ -67,6 +67,54 @@ File Download::
     2.  To get the source and show content in the terminal.
           curl <url>
         
+
+Vim Editor::
+  To edit a file at any point of line use. Its used in file creation/edit/read.
+      vim <file-name>
+    It is of 3 modes.     1. Escape mode (default)
+                          2. Colon mode (:)
+                          3. Insert mode (i)
+               
+      press 'i' to insert.
+        :q --> to exit from vim editor.
+        :wq --> to write and save.
+        :q! --> force quit without saving.
+
+Process Management ::
+    In Linux everything is a process. Whatever we do in linux, it creates a process ID and fetch the results to you.
+
+       ps -- process from the terminal.
+       ps -ef -- to list down the all processess in the terminal.
+       ps -e -- all process.
+
+    To kill a process, use kill command;          Kill PID -- terminate the process.
+                 top -- command is used to list down all the processes with memory.
+               
+               
+ User Management ::
+   In order to create a user in linux, you must have root access. 
+       1. useradd <user-name>
+                     user added to linux.
+       2. passwd <user-name>  --  setting up password for user.
+       3. id <user-name>  ---     to get user info.
+    To view the list of all users created in linux, 
+       vim /etc/passwd
+       
+       In general, users have 2 groups : Primary group and secondary group.
+          
+                              
+Service Management ::
+     To run a system inside a linux server,
+         systemctl start <package> -- this command will start the service.
+         systemctl status <package>
+         systemctl restart <pack>  --- stop and restart the pack.
+         
+Network Management:: 
+       There are 65535 ports are there in LINUX
+            To check port numbers open in your linux server -  netstat -ln   
+            To troubleshoot :  telnet IP-address port-number
+
+
 Miscellaneous::
 
      1. To find text in a file.
@@ -81,6 +129,11 @@ Miscellaneous::
             echo <file-name>
      6. To install any webserver or any package.
           yum install <package> -y
+          yum update -y --- update the processess to latest version.
+          yum list all
+          yum list available
+          yum remove <package>
+          
         
         
   Exit status is very crucial in linux as it shows whether the result is success or failure. Linux stores it in a special variable.

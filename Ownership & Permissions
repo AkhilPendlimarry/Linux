@@ -1,0 +1,39 @@
+We have 3 types of ownership in Linux.
+
+User : One who created the file/folder. denoted by u
+Group: A group of users the file belongs to. Denoted by g
+Others: Anyone other than user and group. denotes by o
+
+Whenever a user is created in Linux, a group with same name also created by default.
+
+Permissions : 3 types.
+    Read - denotes by number 4
+    Write - denoted by 2
+    Execute - denoted by 1
+    
+        -rw-r--r--. 1 ec2-user ec2-user  126 May 31 09:45 hosts
+        
+  Above line has total 10 characters. First character shows it is a File(-)
+   next 3 characters denotes permission of user.
+   next 3 characters denotes permission of group.
+   next 3 characters denotes permission of other.
+   
+   So user has read and write access.
+   Group has read access.
+   others has read access.
+   
+   If we want to add execute permission to everyone.
+        chmod ugo+x <file-name>
+        
+   If we want to add write permission only to user and group.
+        chmod ug+w <file-name>
+        
+   If we want to remove executive access to all.
+        chmod ugo-x <file-name>
+        
+        
+   we can also use letters i.e., R + W = 4 + 2 = 6;
+                                 R + W + X = 4 + 2 + 1 = 7;
+   Below line denotes read access to user and no access to group and others.
+        chmod 400 <file-name>
+   

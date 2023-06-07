@@ -1,1 +1,92 @@
 Commands
+
+Any command in Linux is syntax based. The command behaviour we choose is Options and inputs.
+<command-name> <options> <inputs>
+
+When we login to the server by default we will land into 
+/home/<user-name> --> different for differnet distros like CentOS, Fedora etc.,
+
+To get Sudo access.
+ sudo su -
+ 
+To change directory to any other folder.
+ cd </path-to-folder>
+ 
+ Listing the files ::
+ 
+     1. To list the files
+          ls
+     2. List files and folders in long format.
+            ls -l
+     3. Listing files in reverse order.
+          ls -lr
+     4. List the files in latest time format.
+           ls -lt
+     5. List the idden files. Hidden files start wit.
+          ls -la
+     
+ Cat Command ::
+ 
+     1. To create an empty file.
+           touch <file-name>
+     2. create the file and open it to enter text. Enter the text and press ctrl + d to save.
+           cat < file-name>
+     3. Append text to the file.
+           cat >> <file-name>
+     4. Just to open the file.
+           cat <file-name>
+     5. To create a directory/folder.
+            mkdir <file-name>
+     6. To merge two files into a new file.
+            cat <f1> <f2> <new-file>
+    
+    
+Remove files :: 
+
+   > To remove a file.
+        rm <file-name>      
+   > To remove an entire folder, use -r. it means recursive.
+        rm -r <folder-name>
+   
+       
+Copy & Move ::
+   1. Copy the file.
+        cp <source> <destination>
+   2. Copy the folder into another folder.
+        cp <source-folder> <destination-folder> -r
+   3.  Move the file/folder.
+        mv <source> <destination>
+   4.   Rename the file.
+        mv <present-file-name> <new-file-name>
+        
+        
+File Download::
+    1. To download a file from the internet.
+          wget <download-url>
+          
+    2.  To get the source and show content in the terminal.
+          curl <url>
+        
+Miscellaneous::
+
+     1. To find text in a file.
+          grep <text-to-search> <file-name>
+     2.  To find top 10 lines in a file.
+            head <file-name>
+     3.   To find last 10 lines.
+            tail <filename>
+     4.   To find a custom number of lines.
+            head -n 5 <filename>
+     5. To print the content.
+            echo <file-name>
+     6. To install any webserver or any package.
+          yum install <package> -y
+        
+        
+        
+        
+        
+        
+        
+        
+        
